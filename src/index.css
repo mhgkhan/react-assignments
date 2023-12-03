@@ -2,31 +2,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .container {
   width: 90%;
   margin: 0px auto;
+  max-width: 1600px !important;
 }
 
-header,footer {
+header,
+footer {
   background: #7c087c;
   width: 100%;
   box-shadow: 0px 0px 10px darkgray;
   border-radius: 4px;
 }
-header .container,footer .container {
+header .container,
+footer .container {
   padding: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header{
+header {
   position: sticky;
   top: 0;
 }
-
 
 header .logo {
   width: 80px;
@@ -67,24 +69,24 @@ main {
   min-height: 80vh;
 }
 
-main .intro{
+main .intro {
   width: 100%;
   height: auto;
 }
-main .intro .container{
+main .intro .container {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 100px 20px;
 }
 
-.content-welcome{
+.content-welcome {
   width: 60%;
   text-align: left;
   padding: 10px;
 }
 
-.content-welcome span{
+.content-welcome .hi {
   /* margin-bottom: 1rem; */
   margin: 1rem 0px;
   display: block;
@@ -92,16 +94,19 @@ main .intro .container{
   font-weight: bold;
   font-size: 1.2rem;
 }
-.content-welcome h1{
+.content-welcome h1 {
   font-size: 3rem;
   color: #7c087c;
 }
 
-.content-welcome p{
-  margin:.8rem 0px ;
+.content-welcome p {
+  margin: 0.8rem 0px;
 }
 
-button{
+.content-welcome .js {
+  color: #1414a1d3;
+}
+button {
   width: auto;
   padding: 7px 10px;
   font-weight: bold;
@@ -110,42 +115,38 @@ button{
   background: white;
   border-radius: 50px;
   border: 2px solid #7c087c;
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
 }
-button:hover{
+button:hover {
   background: #7c087c;
   color: white;
 }
-button:active{
-  transform: scale(.9);
+button:active {
+  transform: scale(0.9);
 }
 
-
-
-.slideshow-pics{
+.slideshow-pics {
   width: 220px;
 }
-.slideshow-pics img{
+.slideshow-pics img {
   width: 100%;
 }
 
-
-
-.projects{
+.projects {
   width: 100%;
   margin: 1rem auto;
   margin-top: 3rem;
 }
-.projects h1{
+.projects h1 {
   text-align: center;
   margin: 2rem auto;
   font-size: 3rem;
   font-weight: bold;
-  color: #7c087c  ;
+  color: #7c087c;
 }
 
-.projects-container{
+.projects-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,8 +154,7 @@ button:active{
   flex-wrap: wrap;
 }
 
-
-.projects .container .project{
+.projects .container .project {
   width: 300px;
   height: 300px;
   border: 1px solid gray;
@@ -165,7 +165,7 @@ button:active{
   box-shadow: 0px 0px 10px darkgray;
   border-radius: 10px;
 }
-.project img{
+.project img {
   width: 100%;
   height: 100%;
   position: relative;
@@ -184,14 +184,12 @@ button:active{
   color: white;
   height: 0px;
   overflow: hidden;
-  transition: .8s ease-in-out;
+  transition: 0.8s ease-in-out;
   padding: 0px 10px;
 }
-.project:hover .content-project{
+.project:hover .content-project {
   height: 100%;
-} 
-
-
+}
 
 .tableassignment {
   box-shadow: 0px 0px 13px darkgray;
@@ -292,13 +290,89 @@ table tr td {
   color: black;
 }
 
-
-footer p{
+footer p {
   font-size: 1.1rem;
   padding: 5px 20px;
   color: white;
 }
-footer p a{
+footer p a {
   color: antiquewhite;
   text-decoration: none;
+}
+
+@media screen and (max-width: 770px) {
+  html {
+    font-size: 90%;
+  }
+  header {
+    background: none;
+    position: relative;
+  }
+  header nav {
+    position: absolute;
+    background: #7c087c;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    z-index: 9999;
+    /* width: 300px; */
+  }
+  header nav ul {
+    flex-direction: column;
+    width: 100% !important;
+  }
+  nav ul li {
+    width: 100% !important;
+    margin:.6rem auto;
+  }
+  nav ul li a {
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+
+
+}
+
+
+
+@media screen and (max-width:600px){
+  html{
+    font-size: 85%;
+  }
+  header nav{
+    display: none;
+  }
+  .intro .container{
+    padding: 50px !important;
+    flex-direction: column-reverse;
+    justify-content: flex-start !important;
+    width: 100%;
+  }
+  .slideshow-pics{
+    width: auto;
+    height: auto;
+  }
+  .intro img{
+    width: 160px;
+    height: 220px;
+    border-radius: 120px;
+  }
+  .intro .container .content-welcome{
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width:450px){
+  html{
+    font-size: 70%;
+  }
+  .intro .container{
+    padding: 15px !important;
+  }
+  .project{
+    width: 270px !important;
+  height: 240px !important; }
 }

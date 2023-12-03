@@ -5,10 +5,10 @@ const Intro = () => {
     <section className="intro">
       <div className="container">
         <div className="content-welcome">
-          <span>Hi </span>
+          <span className="hi">Hi </span>
           <h3>And Welcome </h3>
           <h1>
-            In My React.js <br /> Class Assignments{" "}
+            In My React.<span className="js">Js</span> <br /> Class Assignments{" "}
           </h1>
           <p>
             Scroll now or click on the button below to explor my projects Scroll
