@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0px auto;
+}
+
+header,footer {
+  background: #7c087c;
+  width: 100%;
+  box-shadow: 0px 0px 10px darkgray;
+  border-radius: 4px;
+}
+header .container,footer .container {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header{
+  position: sticky;
+  top: 0;
+}
+
+
+header .logo {
+  width: 80px;
+  height: 80px;
+}
+header .logo img {
+  width: 100%;
+  height: 100%;
+  padding: 0px 10px;
+  background: white;
+  border-radius: 10px;
+}
+
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style-type: none;
+  margin: 0px 0.3rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px 8px;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  background: #500250;
+  color: white;
+  border-radius: 5px;
+}
+
+main {
+  width: 100%;
+  min-height: 80vh;
+}
+
+main .intro{
+  width: 100%;
+  height: auto;
+}
+main .intro .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px 20px;
+}
+
+.content-welcome{
+  width: 60%;
+  text-align: left;
+  padding: 10px;
+}
+
+.content-welcome span{
+  /* margin-bottom: 1rem; */
+  margin: 1rem 0px;
+  display: block;
+  color: #500250;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.content-welcome h1{
+  font-size: 3rem;
+  color: #7c087c;
+}
+
+.content-welcome p{
+  margin:.8rem 0px ;
+}
+
+button{
+  width: auto;
+  padding: 7px 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #7c087c;
+  background: white;
+  border-radius: 50px;
+  border: 2px solid #7c087c;
+  transition: .3s;
+  cursor: pointer;
+}
+button:hover{
+  background: #7c087c;
+  color: white;
+}
+button:active{
+  transform: scale(.9);
+}
+
+
+
+.slideshow-pics{
+  width: 220px;
+}
+.slideshow-pics img{
+  width: 100%;
+}
+
+
+
+.projects{
+  width: 100%;
+  margin: 1rem auto;
+  margin-top: 3rem;
+}
+.projects h1{
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #7c087c  ;
+}
+
+.projects-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  flex-wrap: wrap;
+}
+
+
+.projects .container .project{
+  width: 300px;
+  height: 300px;
+  border: 1px solid gray;
+  cursor: pointer;
+  position: relative;
+  /* padding: 5px; */
+  overflow: hidden;
+  box-shadow: 0px 0px 10px darkgray;
+  border-radius: 10px;
+}
+.project img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.project .content-project {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #af13a2b7;
+  color: white;
+  height: 0px;
+  overflow: hidden;
+  transition: .8s ease-in-out;
+  padding: 0px 10px;
+}
+.project:hover .content-project{
+  height: 100%;
+} 
+
+
+
+.tableassignment {
+  box-shadow: 0px 0px 13px darkgray;
+  border-radius: 10px;
+  margin: 1rem auto;
+  width: 90%;
+}
+
+.tableassignment form {
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.tableassignment form input,
+.tableassignment form button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+table {
+  margin-top: 1rem;
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  margin: 1rem auto;
+}
+table thead tr th,
+table tr td {
+  font-size: 1.1rem;
+  border: 1px solid darkgray;
+  padding: 10px;
+}
+
+.todolist {
+  width: 500px;
+  height: auto;
+  padding: 10px;
+  box-shadow: 0px 0px 13px darkgray;
+  border-radius: 10px;
+  margin: 2rem auto;
+}
+
+.todolist from .inputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todolist form .inputs input {
+  width: 70%;
+  padding: 6px;
+  font-size: 1.1rem;
+}
+
+.todolist form .inputs button {
+  padding: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.todoscontainer {
+  width: 100%;
+  margin: 1rem auto;
+}
+.todoscontainer h2 {
+  margin: 1rem auto;
+}
+
+.todo {
+  display: flex;
+  width: 100%;
+  padding: 3px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  border: 1px solid gray;
+  border-radius: 50px;
+  font-weight: bold;
+}
+.todo span {
+  width: 20px;
+}
+.todo p {
+  width: 70%;
+  text-align: left;
+}
+.todo button {
+  width: 10%;
+  padding: 6px;
+  border-radius: 50px;
+  border: 1px solid black;
+  color: black;
+}
+
+
+footer p{
+  font-size: 1.1rem;
+  padding: 5px 20px;
+  color: white;
+}
+footer p a{
+  color: antiquewhite;
+  text-decoration: none;
+}
